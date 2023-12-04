@@ -18,6 +18,12 @@ public class mainExec extends Application {
     }
 
     public static void main(String[] args) {
+        Universe test = new Universe();
+        Category testCat = new Category(1, "A");
+        test.addSaved(testCat);
+        World testWorld = new World(2, "B");
+        test.addSaved(testWorld);
+        System.out.println(test.showCategories());
         launch();
     }
 }

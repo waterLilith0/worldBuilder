@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="started working on the TextEditor">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="added classes needed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/mainExec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/mainExec.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,20 +66,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.4862069&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/floof/IdeaProjects/PlayGround",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.4862069",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="worldBuilder.main" />
@@ -103,6 +110,7 @@
       <updated>1699632217412</updated>
       <workItem from="1701702330035" duration="131000" />
       <workItem from="1701702519347" duration="268000" />
+      <workItem from="1701706941296" duration="2147000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -128,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699807994194</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added classes needed">
+      <option name="closed" value="true" />
+      <created>1701707121975</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701707121975</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +153,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="started working on the TextEditor" />
-    <option name="LAST_COMMIT_MESSAGE" value="started working on the TextEditor" />
+    <MESSAGE value="added classes needed" />
+    <option name="LAST_COMMIT_MESSAGE" value="added classes needed" />
   </component>
 </project>
