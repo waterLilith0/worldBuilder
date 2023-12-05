@@ -5,14 +5,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.worldbuilder.uiController">
    <children>
-      <Label layoutY="-7.0" prefHeight="278.0" prefWidth="601.0" text="Label" textAlignment="CENTER">
+      <Label fx:id="debugOut" layoutY="-7.0" prefHeight="381.0" prefWidth="601.0" text="Hullu" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="134.0" layoutY="277.0" prefHeight="25.0" prefWidth="332.0" />
+      <TextField fx:id="debugIn" layoutX="-3.0" layoutY="374.0" prefHeight="25.0" prefWidth="601.0" />
    </children>
 </AnchorPane>

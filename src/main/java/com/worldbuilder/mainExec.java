@@ -1,5 +1,6 @@
 package com.worldbuilder;
 
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,15 +17,13 @@ public class mainExec extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+        uiController test = new uiController();
+        test.setDebugOut("T-T");
+
+        System.out.println(test.getDebugOut());
     }
 
     public static void main(String[] args) {
-        Universe test = new Universe();
-        Category testCat = new Category(1, "A");
-        test.addSaved(testCat);
-        World testWorld = new World(2, "B");
-        test.addSaved(testWorld);
-        System.out.println(test.showCategories());
         launch();
     }
 }
