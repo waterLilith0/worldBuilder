@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class uiController {
+public class UIController {
     @FXML
     private Label debugOut = new Label("hi");
 
@@ -26,7 +26,7 @@ public class uiController {
         return s_debugOut;
     }
 
-    public void setDebugOut(String  s_debugOut) {
+    public void setDebugOut(String s_debugOut) {
         debugOut.setText(s_debugOut);
     }
 }

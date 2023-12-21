@@ -1,6 +1,5 @@
 package com.worldbuilder;
 
-import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class mainExec extends Application {
+public class MainExec extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Parent fxmlLoader = FXMLLoader.load(getClass().getResource("debugging.fxml"));
@@ -17,10 +16,9 @@ public class mainExec extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
-        uiController test = new uiController();
-        test.setDebugOut("T-T");
 
-        System.out.println(test.getDebugOut());
+        UIController test = new UIController();
+        test.setDebugOut("second text");
     }
 
     public static void main(String[] args) {
