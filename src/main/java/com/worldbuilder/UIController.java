@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 
 public class UIController {
     @FXML
-    private Label debugOut = new Label("hi");
+    private Label debugOut = new Label("init");
 
     @FXML
     private TextField debugIn;
@@ -21,12 +21,8 @@ public class UIController {
         debugIn.setText(s_debugIn);
     }
 
-    public String getDebugOut() {
-        String s_debugOut = debugOut.getText();
-        return s_debugOut;
-    }
-
-    public void setDebugOut(String s_debugOut) {
-        debugOut.setText(s_debugOut);
+    @FXML
+    public void initialize() {
+        debugOut.setText("Initialized");
     }
 }
