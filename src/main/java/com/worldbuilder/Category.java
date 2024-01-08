@@ -7,8 +7,7 @@ public class Category {
     protected SecureRandom random = new SecureRandom();
     protected int catID = random.nextInt(); // this is a random number; each category has it's own individual id in the object
 
-    Category(int catID, String name) {
-        this.catID = catID;
+    Category(String name) {
         this.name = name;
     }
 

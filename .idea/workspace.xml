@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="Added Debugging scene&#10;and sceneController">
+    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/UIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/debugging.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +74,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build worldBuilder.executor": "Run",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
     "Gradle.worldBuilder [:MainExec.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -85,7 +90,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.4862069",
     "vue.rearranger.settings.migration": "true"
@@ -124,7 +129,10 @@
       <workItem from="1701706941296" duration="2147000" />
       <workItem from="1701759151783" duration="4922000" />
       <workItem from="1703145708610" duration="1092000" />
-      <workItem from="1703272565195" duration="2700000" />
+      <workItem from="1703272565195" duration="3707000" />
+      <workItem from="1704653569654" duration="920000" />
+      <workItem from="1704722980204" duration="850000" />
+      <workItem from="1704723841790" duration="189000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -165,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701761860773</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?">
+      <option name="closed" value="true" />
+      <created>1703275767367</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703275767367</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +192,7 @@
     <MESSAGE value="started working on the TextEditor" />
     <MESSAGE value="added classes needed" />
     <MESSAGE value="Added Debugging scene&#10;and sceneController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Debugging scene&#10;and sceneController" />
+    <MESSAGE value="tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?" />
+    <option name="LAST_COMMIT_MESSAGE" value="tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?" />
   </component>
 </project>

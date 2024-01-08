@@ -21,6 +21,13 @@ public class Universe {
         }
     }
 
+    public int getCatID() {
+        for (int i = 0; i <= saved.size(); i++) {
+            return saved.get(i).catID;
+        }
+        return 0;
+    }
+
     public ArrayList<Category> showCategories() { // shows the categories saved in an arraylist
         return saved;
     }

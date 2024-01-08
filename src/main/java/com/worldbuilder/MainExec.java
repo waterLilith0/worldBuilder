@@ -19,6 +19,10 @@ public class MainExec extends Application {
         stage.show();
 
         UIController test = new UIController();
+        Universe testUni = new Universe();
+        Category creatures = new Category("Creatures");
+        testUni.addSaved(creatures);
+        System.out.println(testUni.getCatID());
     }
 
     public static void main(String[] args) {
