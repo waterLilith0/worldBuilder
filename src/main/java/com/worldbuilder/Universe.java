@@ -1,9 +1,10 @@
 package com.worldbuilder;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 
 public class Universe {
-    private int id;
+    private SecureRandom id = new SecureRandom();
     private String name;
     private int color;
 

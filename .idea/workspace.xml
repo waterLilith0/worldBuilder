@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/ConsoleVersion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/debugging.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/FileOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/FileOperation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,30 +71,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build worldBuilder.executor": "Run",
-    "Gradle.Load Gradle Dependencies.executor": "Run",
-    "Gradle.worldBuilder [:MainExec.main()].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/floof/IdeaProjects/PlayGround",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.4862069",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build worldBuilder.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.worldBuilder [:MainExec.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/floof/IdeaProjects/PlayGround&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4862069&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ghsenet\IdeaProjects\worldBuilder\src\main\resources\com\worldbuilder" />
@@ -133,6 +132,7 @@
       <workItem from="1704653569654" duration="920000" />
       <workItem from="1704722980204" duration="850000" />
       <workItem from="1704723841790" duration="189000" />
+      <workItem from="1704956124310" duration="4442000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -186,6 +186,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
