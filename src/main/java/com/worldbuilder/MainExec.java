@@ -24,9 +24,9 @@ public class MainExec extends Application {
 */
 
         // variable declaration
+        FileOperation test = new FileOperation();   // test
         // end variables
 
-        FileOperation test = new FileOperation();
         System.out.println(test.mainDir);   // shows main directory
         for (String i: test.showSavedFiles()) { // prints every saved file as a string
             if (i.endsWith(".sav")) {
@@ -38,6 +38,9 @@ public class MainExec extends Application {
         } else {
             test.createSaveFolder();
         }
+
+        System.out.println(test.edit());
+
 /*
         folder structure of the program:
         worldbuilder - main folder
