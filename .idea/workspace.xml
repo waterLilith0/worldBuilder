@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/ConsoleVersion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/debugging.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/FileOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/FileOperation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -16,21 +16,39 @@ import java.util.Scanner;
 public class MainExec extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        /* Scene for UI
+/* Scene for UI
         Parent fxmlLoader = FXMLLoader.load(getClass().getResource("debugging.fxml"));
         Scene scene = new Scene(fxmlLoader);
         stage.setScene(scene);
         stage.show();
-        */
+*/
 
         // variable declaration
-
         // end variables
 
+        FileOperation test = new FileOperation();
+        System.out.println(test.mainDir);   // shows main directory
+        for (String i: test.showSavedFiles()) { // prints every saved file as a string
+            if (i.endsWith(".sav")) {
+                System.out.println(i);
+            }
+        }
+        if (Files.exists(test.getSaveFolder())) {
+            System.out.println("exists");
+        } else {
+            test.createSaveFolder();
+        }
+/*
+        folder structure of the program:
+        worldbuilder - main folder
+            - java - this is where all the java classes are saved
+            - resources - includes the css and fxml for the look of the program
+            - tmp - gets created during startup, this is where the program reads from when saving, gets deleted after
+            - sav - this is where the program should save the data permanently
+*/
+    }
 
-
-        /* only important for console version!!!
-
+/* only important for console version!!!
         // console version variables
         Scanner input = new Scanner(System.in);
         boolean run = true;
@@ -65,26 +83,7 @@ public class MainExec extends Application {
             }
         }
         // end of console only version
-
-         */
-
-        FileOperation test = new FileOperation();
-        System.out.println(test.mainDir);
-        if (Files.exists(test.test)) {
-            System.out.println("exists");
-        } else {
-            Files.createDirectories(test.test);
-        }
-        /*
-        folder structure of the program:
-        worldbuilder - main folder
-            - java - this is where all the java classes are saved
-            - resources - includes the css and fxml for the look of the program
-            - tmp - gets created during startup, this is where the program reads from when saving, gets deleted after
-            - sav - this is where the program should save the data permanently
-        */
-    }
-
+*/
     public static void main(String[] args) {
         launch();
     }
