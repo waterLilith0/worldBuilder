@@ -24,29 +24,22 @@ public class MainExec extends Application {
 */
 
         // variable declaration
-        FileOperation test = new FileOperation();   // test
+        FileOperation newUniverse = new FileOperation();   // test
         // end variables
 
-        System.out.println(test.mainDir);   // shows main directory
-        for (String i: test.showSavedFiles()) { // prints every saved file as a string
-            if (i.endsWith(".sav")) {
-                System.out.println(i);
-            }
-        }
-        if (Files.exists(test.getSaveFolder())) {
+        System.out.println(newUniverse.mainDir);   // shows main directory
+
+        if (Files.exists(newUniverse.getSaveFolder())) {    // does save folder exist? if no -> create
             System.out.println("exists");
         } else {
-            test.createSaveFolder();
+            newUniverse.initialize();
         }
-
-        System.out.println(test.edit());
 
 /*
         folder structure of the program:
         worldbuilder - main folder
             - java - this is where all the java classes are saved
             - resources - includes the css and fxml for the look of the program
-            - tmp - gets created during startup, this is where the program reads from when saving, gets deleted after
             - sav - this is where the program should save the data permanently
 */
     }

@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/FileOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/FileOperation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/TextEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/TextEditor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +130,7 @@
       <workItem from="1704722980204" duration="850000" />
       <workItem from="1704723841790" duration="189000" />
       <workItem from="1704956124310" duration="4442000" />
+      <workItem from="1705302218134" duration="2051000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />

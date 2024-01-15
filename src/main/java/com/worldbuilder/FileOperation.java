@@ -10,10 +10,33 @@ import java.util.ArrayList;
 
 public class FileOperation {
 
+    /*
+    TODO call to initialize to actually create the files;
+        edit: check whether file already exists and try to open save file into temp, else make a new temp file
+        save: save the current setup from temp file into sav file in the format of
+            name universe
+            <categoryid>
+                <element>
+                    -text-
+                <element>
+                    -text-
+            <categoryid>
+                <element>
+                    -text-
+            <categoryid>
+                <categoryid>
+                    <element>
+                        -text-
+                    <element>
+                        -text-
+     */
+
     // variables
-    String chosenDir, chosenFile;   // user selection
+    File chosenDir, chosenFile;   // user selection
     String mainDir = System.getProperty("user.dir");    // the main folder for the program
     Path pMainDir = Paths.get(mainDir); // main folder as a Path
+    File tempDir = null;
+    File tempFile = null;
     private Path saveFolder = Paths.get(mainDir, "sav");    // this is where files are permanently saved into
     // variables end
 
@@ -30,16 +53,21 @@ public class FileOperation {
                 temp.add(found.toString());
             }
         } catch (IOException e) {
-            System.out.println("Error");
+            System.out.println("No files in folder");
         }
         return temp;
     }
 
-    public void createSaveFolder() throws IOException { // creates the save folder
+    public void initialize() throws IOException { // creates the save folder
         try {
             Files.createDirectory(saveFolder);
         } catch (IOException e) {
-            System.out.println("Error at file creation");
+            System.out.println("Error at save folder creation");
+        }
+        try {
+            File base = Files.createFile(saveFolder).toFile();
+        } catch (IOException e) {
+            System.out.println("Error at save file creation");
         }
     }
 
@@ -47,19 +75,29 @@ public class FileOperation {
 
     }
 
-    public File edit() throws IOException {
-        File tempDir = null;
+    public File edit() throws IOException { // gets called when user accesses
+
         try {
             tempDir = Files.createTempDirectory("tmp").toFile();
         } catch (IOException e) {
             System.out.println("Error creating temp folder");
         }
+        try {
+            tempFile = Files.createTempFile("edit", ".tmp").toFile();
+        } catch (IOException e) {
+            System.out.println("Error creating temp file");
+        }
         tempDir.deleteOnExit();
-        return tempDir;
+        tempFile.deleteOnExit();
+        return tempFile;
     }
 
-    public void delete() {  // delete a file
-
+    public void delete(File toDelete) {  // delete a file
+        if (toDelete.exists() && toDelete.canWrite()) {
+            toDelete.delete();
+        } else {
+            System.out.println("Error deleting files! Do you have the right permissions and does the file exist?");
+        }
     }
     // methods end
 
