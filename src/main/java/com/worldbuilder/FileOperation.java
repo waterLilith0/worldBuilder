@@ -16,18 +16,18 @@ public class FileOperation {
         save: save the current setup from temp file into sav file in the format of
             name universe
             <categoryid>
-                <element>
+                <elementid>
                     -text-
-                <element>
+                <elementid>
                     -text-
             <categoryid>
-                <element>
+                <elementid>
                     -text-
             <categoryid>
                 <categoryid>
-                    <element>
+                    <elementid>
                         -text-
-                    <element>
+                    <elementid>
                         -text-
      */
 
@@ -38,6 +38,7 @@ public class FileOperation {
     File tempDir = null;
     File tempFile = null;
     private Path saveFolder = Paths.get(mainDir, "sav");    // this is where files are permanently saved into
+    private Path saveFile = saveFolder.getFileName().resolve(saveFolder );
     // variables end
 
     // methods
@@ -65,7 +66,7 @@ public class FileOperation {
             System.out.println("Error at save folder creation");
         }
         try {
-            File base = Files.createFile(saveFolder).toFile();
+            Files.createFile(saveFolder);
         } catch (IOException e) {
             System.out.println("Error at save file creation");
         }

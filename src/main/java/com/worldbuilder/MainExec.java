@@ -24,15 +24,37 @@ public class MainExec extends Application {
 */
 
         // variable declaration
-        FileOperation newUniverse = new FileOperation();   // test
+        FileOperation newFiles = new FileOperation();   // test
         // end variables
 
-        System.out.println(newUniverse.mainDir);   // shows main directory
+        System.out.println(newFiles.mainDir);   // shows main directory
 
-        if (Files.exists(newUniverse.getSaveFolder())) {    // does save folder exist? if no -> create
+        if (Files.exists(newFiles.getSaveFolder())) {    // does save folder exist? if no -> create
             System.out.println("exists");
         } else {
-            newUniverse.initialize();
+            newFiles.initialize();
+        }
+
+        Universe newUniverse = new Universe();
+        Category cat1 = new Category("animals");
+        Category cat2 = new Category("plants");
+        World wrld1 = new World("alta");
+        Element testEl = new Element();
+        Element testEl2 = new Element();
+
+        newUniverse.addSaved(cat1);
+        newUniverse.addSaved(cat2);
+        newUniverse.addSaved(wrld1);
+        cat1.addElement(testEl);
+        cat1.addElement(testEl2);
+
+
+
+        for (int id: newUniverse.getCatID()) {
+            System.out.println("ID of Category: " + id);
+        }
+        for (Element i: cat1.getSavedElements()) {
+            System.out.println(i.getId());
         }
 
 /*

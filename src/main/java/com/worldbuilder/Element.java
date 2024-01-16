@@ -5,7 +5,7 @@ import java.security.SecureRandom;
 public class Element {
     // variables
     private String name;
-    private SecureRandom rand;
+    private SecureRandom rand = new SecureRandom();
     private int id = rand.nextInt();
     private String text;
     // variables end

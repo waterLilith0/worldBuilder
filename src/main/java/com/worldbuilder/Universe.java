@@ -4,12 +4,14 @@ import java.security.SecureRandom;
 import java.util.ArrayList;
 
 public class Universe {
+    // variables
     private SecureRandom id = new SecureRandom();
-    private String name;
-    private int color;
-
+    private String name = "";
+    private int color = 0;
     private ArrayList<Category> saved = new ArrayList<Category>();
+    // variables end
 
+    // methods
     public void addSaved(Category savedIn) { // save a new item into the categories fitting to this universe, can also be a world
         saved.add(savedIn);
     }
@@ -22,14 +24,16 @@ public class Universe {
         }
     }
 
-    public int getCatID() {
-        for (int i = 0; i <= saved.size(); i++) {
-            return saved.get(i).catID;
+    public int[] getCatID() {
+        int[] temp = new int[saved.size()];
+        for (int i = 0; i <= temp.length - 1; i++) {
+            temp[i] = saved.get(i).getCatID();
         }
-        return 0;
+        return temp;
     }
 
     public ArrayList<Category> showCategories() { // shows the categories saved in an arraylist
         return saved;
     }
+    // methods end
 }
