@@ -1,6 +1,7 @@
 package com.worldbuilder;
 
 import java.security.SecureRandom;
+import java.util.Iterator;
 
 public class Element {
     // variables

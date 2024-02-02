@@ -41,12 +41,16 @@ public class MainExec extends Application {
         World wrld1 = new World("alta");
         Element testEl = new Element();
         Element testEl2 = new Element();
+        testEl.setText("This is some text in this file");
 
         newUniverse.addSaved(cat1);
         newUniverse.addSaved(cat2);
         newUniverse.addSaved(wrld1);
         cat1.addElement(testEl);
         cat1.addElement(testEl2);
+
+        newFiles.edit(testEl.getText().getBytes());
+        System.out.println(newFiles.getTempFile());
 
 
 
