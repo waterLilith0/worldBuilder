@@ -1,13 +1,8 @@
 package com.worldbuilder;
 
-import java.security.SecureRandom;
-import java.util.Iterator;
-
 public class Element {
     // variables
     private String name;
-    private SecureRandom rand = new SecureRandom();
-    private int id = rand.nextInt();
     private String text;
     // variables end
 
@@ -24,12 +19,14 @@ public class Element {
         this.name = name;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public String getName() {
         return name;
     }
     // methods end
+
+    // constructors
+    Element(String name) {
+        this.name = name;
+    }
+    // constructors end
 }

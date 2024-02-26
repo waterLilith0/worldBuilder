@@ -1,39 +1,28 @@
 package com.worldbuilder;
 
 import java.security.SecureRandom;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Set;
 
 public class Universe {
     // variables
     private SecureRandom id = new SecureRandom();
     private String name = "";
     private int color = 0;
-    private ArrayList<Category> saved = new ArrayList<Category>();
+    private HashMap<Integer, Category> savedCategories = new HashMap<Integer, Category>(); // sort categories with id
     // variables end
 
     // methods
-    public void addSaved(Category savedIn) { // save a new item into the categories fitting to this universe, can also be a world
-        saved.add(savedIn);
+    void addElement(Category aCategory) {
+        savedCategories.put(id.nextInt(), aCategory);
     }
 
-    public void removeSaved(int catID) { // removes a certain element in the list by id
-        for (int i = 0; i <= saved.size(); i++) {
-            if (saved.get(i).equals(catID)) {
-                saved.remove(i);
-            }
-        }
+    HashMap<Integer, Category> readAllElements() {
+        return savedCategories;
     }
 
-    public int[] getCatID() {
-        int[] temp = new int[saved.size()];
-        for (int i = 0; i <= temp.length - 1; i++) {
-            temp[i] = saved.get(i).getCatID();
-        }
-        return temp;
-    }
-
-    public ArrayList<Category> showCategories() { // shows the categories saved in an arraylist
-        return saved;
+    Set<Integer> hashes() {
+        return savedCategories.keySet();
     }
     // methods end
 }

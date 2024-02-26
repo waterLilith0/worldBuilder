@@ -1,27 +1,28 @@
 package com.worldbuilder;
 
 import java.security.SecureRandom;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Set;
 
 public class Category {
     // variables
     protected String name;
-    protected SecureRandom random = new SecureRandom();
-    protected int catID = random.nextInt(); // this is a random number; each category has its own individual id in the object
-    protected ArrayList<Element> savedElements = new ArrayList<Element>(); // this is where actual text gets saved into
+    protected SecureRandom id = new SecureRandom();
+    protected int test = id.nextInt();
+    protected HashMap<Integer, Element> savedElements = new HashMap<Integer, Element>(); // save elements with id
     // variables end
 
     // methods
-    public int getCatID() {
-        return catID;
+    void addElement(Element aElement) {
+        savedElements.put(id.nextInt(), aElement);
     }
 
-    public ArrayList<Element> getSavedElements() {
+    HashMap<Integer, Element> readAllElements() {
         return savedElements;
     }
 
-    public void addElement(Element toAdd) {
-        savedElements.add(toAdd);
+    Set<Integer> hashes() {
+        return savedElements.keySet();
     }
     // methods end
 
@@ -29,7 +30,5 @@ public class Category {
     Category(String name) {
         this.name = name;
     }
-
-    Category() {}
     // constructor end
 }

@@ -1,17 +1,8 @@
 package com.worldbuilder;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 import java.nio.file.Files;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class MainExec extends Application {
     @Override
@@ -24,42 +15,15 @@ public class MainExec extends Application {
 */
 
         // variable declaration
-        FileOperation newFiles = new FileOperation();   // test
         // end variables
+        Category test = new Category("tester");
+        Element testEL1 = new Element("testl1");
+        Element testEL2 = new Element("testl2");
 
-        System.out.println(newFiles.mainDir);   // shows main directory
+        test.addElement(testEL1);
+        test.addElement(testEL2);
+        testEL2.setText("this \n is \n a \n test to see whether it works!");
 
-        if (Files.exists(newFiles.getSaveFolder())) {    // does save folder exist? if no -> create
-            System.out.println("exists");
-        } else {
-            newFiles.initialize();
-        }
-
-        Universe newUniverse = new Universe();
-        Category cat1 = new Category("animals");
-        Category cat2 = new Category("plants");
-        World wrld1 = new World("alta");
-        Element testEl = new Element();
-        Element testEl2 = new Element();
-        testEl.setText("This is some text in this file");
-
-        newUniverse.addSaved(cat1);
-        newUniverse.addSaved(cat2);
-        newUniverse.addSaved(wrld1);
-        cat1.addElement(testEl);
-        cat1.addElement(testEl2);
-
-        newFiles.edit(testEl.getText().getBytes());
-        System.out.println(newFiles.getTempFile());
-
-
-
-        for (int id: newUniverse.getCatID()) {
-            System.out.println("ID of Category: " + id);
-        }
-        for (Element i: cat1.getSavedElements()) {
-            System.out.println(i.getId());
-        }
 
 /*
         folder structure of the program:

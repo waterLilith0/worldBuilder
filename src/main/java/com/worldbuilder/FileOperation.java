@@ -2,7 +2,6 @@ package com.worldbuilder;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.Writer;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -36,8 +35,8 @@ public class FileOperation {
     File chosenDir, chosenFile;   // user selection
     String mainDir = System.getProperty("user.dir");    // the main folder for the program
     Path pMainDir = Paths.get(mainDir); // main folder as a Path
-    Path tempDir = null;
-    Path tempFile = null;
+    File tempDir = null;
+    File tempFile = null;
     private Path saveFolder = Paths.get(mainDir, "sav");    // this is where files are permanently saved into
     private Path saveFile = saveFolder.getFileName().resolve(saveFolder );
     // variables end
@@ -77,21 +76,21 @@ public class FileOperation {
 
     }
 
-    public void edit(byte[] inStream) throws IOException { // gets called when user accesses
+    public File edit() throws IOException { // gets called when user accesses
 
         try {
-            tempDir = Files.createTempDirectory("tmp");
+            tempDir = Files.createTempDirectory("tmp").toFile();
         } catch (IOException e) {
             System.out.println("Error creating temp folder");
         }
         try {
-            tempFile = Files.createTempFile("edit", ".tmp");
-            Files.write(tempFile, inStream);
+            tempFile = Files.createTempFile("edit", ".tmp").toFile();
         } catch (IOException e) {
             System.out.println("Error creating temp file");
         }
-        tempDir.toFile().deleteOnExit();
-        tempFile.toFile().deleteOnExit();
+        tempDir.deleteOnExit();
+        tempFile.deleteOnExit();
+        return tempFile;
     }
 
     public void delete(File toDelete) {  // delete a file
@@ -100,14 +99,6 @@ public class FileOperation {
         } else {
             System.out.println("Error deleting files! Do you have the right permissions and does the file exist?");
         }
-    }
-
-    public Path getTempDir() {
-        return tempDir;
-    }
-
-    public Path getTempFile() {
-        return tempFile;
     }
     // methods end
 
