@@ -1,6 +1,8 @@
 package com.worldbuilder;
 
-public class World extends Category {
+import java.io.Serializable;
+
+public class World extends Category implements Serializable {
     // variables
     // variables end
 

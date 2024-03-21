@@ -1,10 +1,11 @@
 package com.worldbuilder;
 
+import java.io.Serializable;
 import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Set;
 
-public class Universe {
+public class Universe implements Serializable {
     // variables
     private SecureRandom id = new SecureRandom();
     private String name = "";
@@ -23,6 +24,10 @@ public class Universe {
 
     Set<Integer> hashes() {
         return savedCategories.keySet();
+    }
+
+    String getName() {
+        return name;
     }
     // methods end
 }

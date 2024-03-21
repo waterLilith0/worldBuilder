@@ -3,6 +3,8 @@ package com.worldbuilder;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class MainExec extends Application {
     @Override
@@ -15,14 +17,22 @@ public class MainExec extends Application {
 */
 
         // variable declaration
-        // end variables
         Category test = new Category("tester");
         Element testEL1 = new Element("testl1");
         Element testEL2 = new Element("testl2");
 
+        // end variables
+
+        // initial processes needed (file creation etc)
+
+        // done with initial processes
+
+        // use methods
         test.addElement(testEL1);
         test.addElement(testEL2);
         testEL2.setText("this \n is \n a \n test to see whether it works!");
+        // end use of methods
+
 
 
 /*

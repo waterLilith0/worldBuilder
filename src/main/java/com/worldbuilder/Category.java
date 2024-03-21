@@ -1,10 +1,11 @@
 package com.worldbuilder;
 
+import java.io.Serializable;
 import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Set;
 
-public class Category {
+public class Category implements Serializable {
     // variables
     protected String name;
     protected SecureRandom id = new SecureRandom();

@@ -5,4 +5,6 @@ module com.worldbuilder {
 
     opens com.worldbuilder to javafx.fxml;
     exports com.worldbuilder;
+    exports trash;
+    opens trash to javafx.fxml;
 }
