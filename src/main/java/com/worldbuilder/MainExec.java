@@ -17,6 +17,7 @@ public class MainExec extends Application {
         stage.setScene(scene);
         stage.show();
 
+        // test
         // variable declaration
         Category test = new Category("tester");
         Element testEL1 = new Element("testl1");
