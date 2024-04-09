@@ -18,6 +18,8 @@ public class MainExec extends Application {
         stage.show();
 
         // test
+        // test3
+        // test4
         // variable declaration
         Category test = new Category("tester");
         Element testEL1 = new Element("testl1");
