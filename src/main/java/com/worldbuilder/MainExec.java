@@ -1,6 +1,9 @@
 package com.worldbuilder;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,12 +12,10 @@ import java.nio.file.Paths;
 public class MainExec extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-/* Scene for UI
-        Parent fxmlLoader = FXMLLoader.load(getClass().getResource("debugging.fxml"));
-        Scene scene = new Scene(fxmlLoader);
+        Parent loader = FXMLLoader.load(getClass().getResource("debugging.fxml"));
+        Scene scene = new Scene(loader);
         stage.setScene(scene);
         stage.show();
-*/
 
         // variable declaration
         Category test = new Category("tester");
@@ -41,6 +42,7 @@ public class MainExec extends Application {
             - java - this is where all the java classes are saved
             - resources - includes the css and fxml for the look of the program
             - sav - this is where the program should save the data permanently
+            - Controller- Fxml controller for views
 */
     }
 
