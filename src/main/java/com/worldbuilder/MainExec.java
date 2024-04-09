@@ -5,9 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class MainExec extends Application {
     @Override
@@ -20,6 +17,7 @@ public class MainExec extends Application {
         // test
         // test3
         // test4
+        // test2
         // variable declaration
         Category test = new Category("tester");
         Element testEL1 = new Element("testl1");
