@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="started working on FileOperation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/debuggingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/ScreenController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/debugging.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/debugging.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="test branch 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +35,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="front" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="back" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -195,7 +197,28 @@
       <option name="project" value="LOCAL" />
       <updated>1705030148446</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="test branch">
+      <created>1712651746299</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712651746299</updated>
+    </task>
+    <task id="LOCAL-00009" summary="test branch 2">
+      <created>1712652046930</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712652046930</updated>
+    </task>
+    <task id="LOCAL-00010" summary="test branch 2">
+      <created>1712652536910</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712652536910</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +229,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="back" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -219,6 +254,8 @@
     <MESSAGE value="Added Debugging scene&#10;and sceneController" />
     <MESSAGE value="tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?" />
     <MESSAGE value="started working on FileOperation" />
-    <option name="LAST_COMMIT_MESSAGE" value="started working on FileOperation" />
+    <MESSAGE value="test branch" />
+    <MESSAGE value="test branch 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="test branch 2" />
   </component>
 </project>
