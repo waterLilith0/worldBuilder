@@ -1,35 +1,31 @@
 package com.worldbuilder;
 
 import java.io.*;
+import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Saving {
     // variables
-    private final Path mainPath = Paths.get(System.getProperty("user.dir") + System.getProperty("line.separator") + "worldBuilder"); // makes a new path in the working dir
+    private Path mainPath = Paths.get(System.getProperty("user.home") + File.separator + "Documents" + File.separator + "worldBuilder"); // makes a new path in the working dir
     private Universe newUniverse;
     // variables end
 
     // methods
-    Saving() {}
-
-    Saving(Universe newUniverse) {
-        this.newUniverse = newUniverse;
-    }
-
     void initialize() {
         try {
             Files.createDirectory(mainPath);
-            Files.createDirectory(Paths.get(mainPath.toUri() + ""));
+        } catch(FileAlreadyExistsException io) {
+            System.out.println("Main folder structure already exists");
         } catch(Exception e) {
             System.out.println(e);
         }
     }
 
-    void serialize(Universe input) {
+    void save(Universe input) {
         try {
-            FileOutputStream outFile = new FileOutputStream(mainPath.toUri() + System.getProperty("path.separator") + input.getName());
+            FileOutputStream outFile = new FileOutputStream(mainPath.toUri() + File.separator + input.getName());
             ObjectOutputStream outStream = new ObjectOutputStream(outFile);
             outStream.writeObject(input);
             outStream.close();
@@ -41,7 +37,7 @@ public class Saving {
         }
     }
 
-    /*Object deserialize() {
+    /*Object open() {
         try {
             FileInputStream inFile = new FileInputStream();
         } catch() {

@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
+
 public class MainExec extends Application {
     @Override
     public void start(Stage stage) throws Exception {
@@ -14,19 +16,15 @@ public class MainExec extends Application {
         stage.setScene(scene);
         stage.show();
 
-        // test
-        // test3
-        // test4
-        // test2
         // variable declaration
+        Saving running = new Saving();
         Category test = new Category("tester");
         Element testEL1 = new Element("testl1");
         Element testEL2 = new Element("testl2");
-
         // end variables
 
-        // initial processes needed (file creation etc)
-
+        // initial processes needed (file creation etc.)
+        running.initialize();
         // done with initial processes
 
         // use methods
