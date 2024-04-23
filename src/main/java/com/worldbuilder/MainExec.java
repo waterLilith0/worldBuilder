@@ -23,6 +23,7 @@ public class MainExec extends Application {
         Category testCat = new Category("tester");
         Element testEL1 = new Element("testl1");
         Element testEL2 = new Element("testl2");
+        World testW = new World("Luma");
         // end variables
 
         // initial processes needed (file creation etc.)
