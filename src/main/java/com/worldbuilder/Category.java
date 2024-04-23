@@ -1,3 +1,8 @@
+/*
+creates a hashmap with each category getting assigned a random id
+includes names and colors for itself
+ */
+
 package com.worldbuilder;
 
 import java.io.Serializable;
@@ -7,6 +12,7 @@ import java.util.Set;
 
 public class Category implements Serializable {
     // variables
+    private static final long serialversionuid = 1l;
     protected String name;
     protected SecureRandom id = new SecureRandom();
     protected int test = id.nextInt();

@@ -17,7 +17,7 @@ public class Saving {
         try {
             Files.createDirectory(mainPath);
         } catch(FileAlreadyExistsException io) {
-            System.out.println("Main folder structure already exists");
+            System.out.println("Main folder structure already exists at " + mainPath);
         } catch(Exception e) {
             System.out.println(e);
         }
@@ -25,7 +25,7 @@ public class Saving {
 
     void save(Universe input) {
         try {
-            FileOutputStream outFile = new FileOutputStream(mainPath.toUri() + File.separator + input.getName());
+            FileOutputStream outFile = new FileOutputStream(mainPath + File.separator + input.getName());
             ObjectOutputStream outStream = new ObjectOutputStream(outFile);
             outStream.writeObject(input);
             outStream.close();
@@ -37,13 +37,27 @@ public class Saving {
         }
     }
 
-    /*Object open() {
+    Object open(File chosenFile) {
         try {
-            FileInputStream inFile = new FileInputStream();
-        } catch() {
-
+            FileInputStream inFile = new FileInputStream(chosenFile);
+            ObjectInputStream inStream = new ObjectInputStream(inFile);
+            inFile.close();
+            inStream.close();
+        } catch(FileNotFoundException e) {
+            System.out.println(e);
+        } catch (IOException f) {
+            throw new RuntimeException(f);
         }
-        return new Element("test");
-    }*/
+        return new Universe(chosenFile.getName());
+    }
+
+    public Path getMainPath() {
+        return mainPath;
+    }
+
+    public void setMainPath(Path mainPath) {
+        this.mainPath = mainPath;
+    }
+
     // methods end
 }
