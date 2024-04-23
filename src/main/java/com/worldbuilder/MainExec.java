@@ -18,19 +18,24 @@ public class MainExec extends Application {
 
         // variable declaration
         Saving running = new Saving();
-        Category test = new Category("tester");
+        //Universe testUniverse = new Universe("test");
+        Universe mt = new Universe();
+        Category testCat = new Category("tester");
         Element testEL1 = new Element("testl1");
         Element testEL2 = new Element("testl2");
         // end variables
 
         // initial processes needed (file creation etc.)
-        running.initialize();
+        running.initialize();   // creates the main folder structure
+        //running.save(testUniverse);
+        mt = (Universe) running.open(running.getMainPath().toFile());
         // done with initial processes
 
         // use methods
-        test.addElement(testEL1);
-        test.addElement(testEL2);
+        testCat.addElement(testEL1);
+        testCat.addElement(testEL2);
         testEL2.setText("this \n is \n a \n test to see whether it works!");
+
         // end use of methods
 
 
@@ -41,7 +46,7 @@ public class MainExec extends Application {
             - java - this is where all the java classes are saved
             - resources - includes the css and fxml for the look of the program
             - sav - this is where the program should save the data permanently
-            - Controller- Fxml controller for views
+            - Controller - Fxml controller for views
 */
     }
 

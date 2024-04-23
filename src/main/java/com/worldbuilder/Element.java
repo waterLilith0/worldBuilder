@@ -1,9 +1,11 @@
 package com.worldbuilder;
 
 import java.io.Serializable;
+import java.util.HashMap;
 
 public class Element implements Serializable {
     // variables
+    private static final long serialversionuid = 1l;
     private String name;
     private String text;
     // variables end
