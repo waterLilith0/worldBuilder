@@ -1,8 +1,3 @@
-/*
-creates a hashmap with each category getting assigned a random id
-includes names and colors for itself
- */
-
 package com.worldbuilder;
 
 import java.io.Serializable;
@@ -74,6 +69,14 @@ public class Category implements Serializable {
     // methods end
 
     // constructor
+    /**
+     * creates a hashmap with each Element getting assigned a random id - includes names and colors for itself
+     * @id is a SecureRandom
+     * @name is a simple name, can be freely chosen since the used key is id
+     * @color is a simple hex code that's used to set and read a specific color
+     * @savedElements this is where each of Category's objects of the Element type are saved
+     */
+    Category() {}
 
     /**
      * creates a hashmap with each Element getting assigned a random id - includes names and colors for itself

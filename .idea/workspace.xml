@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="new updates on getting saving to work">
+    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="added JavaDocs for developing purposes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Element.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +153,7 @@
       <workItem from="1713282938373" duration="68000" />
       <workItem from="1713543226280" duration="2863000" />
       <workItem from="1713800056668" duration="5344000" />
-      <workItem from="1713876091047" duration="4593000" />
+      <workItem from="1713876091047" duration="6433000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -220,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712946000681</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added JavaDocs for developing purposes">
+      <option name="closed" value="true" />
+      <created>1713881764617</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713881764617</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +263,7 @@
     <MESSAGE value="tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?" />
     <MESSAGE value="started working on FileOperation" />
     <MESSAGE value="new updates on getting saving to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="new updates on getting saving to work" />
+    <MESSAGE value="added JavaDocs for developing purposes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added JavaDocs for developing purposes" />
   </component>
 </project>

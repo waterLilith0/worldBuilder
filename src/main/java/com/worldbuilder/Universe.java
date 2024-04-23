@@ -75,8 +75,7 @@ public class Universe implements Serializable {
      * @color is a simple hex code that's used to set and read a specific color
      * @savedCategories this is where each of Universe's objects of the Category/World type are saved
      */
-    Universe() {
-    }
+    Universe() {}
 
     /**
      * creates a hashmap with each category getting assigned a random id - includes names and colors for itself

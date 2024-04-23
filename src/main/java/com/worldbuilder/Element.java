@@ -1,7 +1,3 @@
-/**
- * test
- */
-
 package com.worldbuilder;
 
 import java.io.Serializable;
