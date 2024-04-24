@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Category implements Serializable {
     // variables
-    private static final long serialversionuid = 1l;
+    private static final long serialversionuid = 1L;
     protected String name;
     protected int color;
     protected SecureRandom id = new SecureRandom(); // used to give individual numbers to each of the savedElements items

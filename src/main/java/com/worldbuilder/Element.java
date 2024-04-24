@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Element implements Serializable {
     // variables
-    private static final long serialversionuid = 1l;
+    private static final long serialversionuid = 1L;
     private String name;
     private String text;
     private int color;
