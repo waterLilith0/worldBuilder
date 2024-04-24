@@ -8,11 +8,15 @@ import java.nio.file.Paths;
 
 public class Saving {
     // variables
-    private Path mainPath = Paths.get(System.getProperty("user.home") + File.separator + "Documents" + File.separator + "worldBuilder"); // makes a new path in the working dir
+    private Path mainPath =
+            Paths.get(System.getProperty("user.home") + File.separator + "Documents" + File.separator + "worldBuilder"); // makes a new path in the working dir
     private Universe newUniverse;
     // variables end
 
     // methods
+    /**
+     * creates the necessary folders on the system in the main path
+     */
     void initialize() {
         try {
             Files.createDirectory(mainPath);
@@ -23,6 +27,9 @@ public class Saving {
         }
     }
 
+    /**
+     * @param input the Universe to be saved into a file, including all its associated Objects
+     */
     void save(Universe input) {
         try {
             FileOutputStream outFile = new FileOutputStream(mainPath + File.separator + input.getName());
@@ -37,6 +44,10 @@ public class Saving {
         }
     }
 
+    /**
+     * @param chosenFile the file to be opened
+     * @return reads the Universe that was previously saved in the file to be read
+     */
     Object open(File chosenFile) {
         try {
             FileInputStream inFile = new FileInputStream(chosenFile);

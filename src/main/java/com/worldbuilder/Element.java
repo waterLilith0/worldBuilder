@@ -1,7 +1,6 @@
 package com.worldbuilder;
 
 import java.io.Serializable;
-import java.util.HashMap;
 
 public class Element implements Serializable {
     // variables
@@ -12,7 +11,6 @@ public class Element implements Serializable {
     // variables end
 
     // methods
-
     /**
      * @return reads text as String
      */
@@ -48,6 +46,12 @@ public class Element implements Serializable {
     // methods end
 
     // constructors
+    /**
+     * @text this is where the user's description goes into
+     * @name this is the name of the Element
+     * @color color as a hex code
+     */
+    Element() {}
 
     /**
      * @text this is where the user's description goes into
