@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Universe implements Serializable {
     // variables
-    private static final long serialversionuid = 1l;
+    private static final long serialversionuid = 1L;
     private SecureRandom id = new SecureRandom();   // used to give individual numbers to each of the savedCategory items
     private String name = "";
     private int color = 0;
@@ -17,7 +17,7 @@ public class Universe implements Serializable {
     // methods
     /**
      * This lets you add a category or world to the universe, saves them with individual Hash values using SecureRandom
-     * @param aCategory
+     * @param aCategory category to be added
      */
     void addCategory(Category aCategory) {
         savedCategories.put(id.nextInt(), aCategory);

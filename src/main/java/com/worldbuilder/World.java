@@ -52,6 +52,16 @@ public class World extends Category implements Serializable {
      * @savedCategories this is where each of World's objects of the Category type are saved
      * @savedElements this is where each of World's objects of the Element type are saved
      */
+    World() {}
+
+    /**
+     * creates a hashmap with each Element getting assigned a random id - includes names and colors for itself
+     * @id is a SecureRandom
+     * @name is a simple name, can be freely chosen since the used key is id
+     * @color is a simple hex code that's used to set and read a specific color
+     * @savedCategories this is where each of World's objects of the Category type are saved
+     * @savedElements this is where each of World's objects of the Element type are saved
+     */
     World(String name) {
         super(name);
     }
