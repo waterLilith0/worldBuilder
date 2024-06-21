@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 
 public class MainExec extends Application {
     @Override
@@ -18,7 +19,7 @@ public class MainExec extends Application {
 
         // variable declaration
         Saving running = new Saving();
-        //Universe testUniverse = new Universe("test");
+        Universe testUniverse = new Universe("test");
         Universe mt = new Universe();
         Category testCat = new Category("tester");
         Element testEL1 = new Element("testl1");
@@ -28,14 +29,15 @@ public class MainExec extends Application {
 
         // initial processes needed (file creation etc.)
         running.initialize();   // creates the main folder structure
-        //running.save(testUniverse);
-        mt = (Universe) running.open(running.getMainPath().toFile());
+        running.save(testUniverse);
+        System.out.println(running.getUniverses());
+        mt = (Universe) running.open(running.getUniverses().get(0));
         // done with initial processes
 
         // use methods
-        testCat.addElement(testEL1);
-        testCat.addElement(testEL2);
-        testEL2.setText("this \n is \n a \n test to see whether it works!");
+        //testCat.addElement(testEL1);
+        //testCat.addElement(testEL2);
+        //testEL2.setText("this \n is \n a \n test to see whether it works!");
 
         // end use of methods
 

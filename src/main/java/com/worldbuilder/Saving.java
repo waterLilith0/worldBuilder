@@ -5,6 +5,8 @@ import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Saving {
     // variables
@@ -25,6 +27,7 @@ public class Saving {
         } catch(Exception e) {
             System.out.println(e);
         }
+
     }
 
     /**
@@ -42,6 +45,10 @@ public class Saving {
         } catch(IOException g) {
             System.out.println(g);
         }
+        File chmod = new File(mainPath + File.separator + "chmod");
+        chmod.setExecutable(true);
+        chmod.setReadable(true);
+        chmod.setWritable(true);
     }
 
     /**
@@ -68,6 +75,19 @@ public class Saving {
 
     public void setMainPath(Path mainPath) {
         this.mainPath = mainPath;
+    }
+
+    /**
+     * @return gives back a list of names of files saved in the main directory (Universes)
+     */
+    public ArrayList<File> getUniverses() {
+        ArrayList<File> universes = new ArrayList<>();
+        File dir = new File(mainPath.toUri());
+        File[] files = dir.listFiles();
+        for (File file : files) {
+            universes.add(Paths.get(mainPath + File.separator + file.getName()).toFile());
+        }
+        return universes;
     }
 
     // methods end
