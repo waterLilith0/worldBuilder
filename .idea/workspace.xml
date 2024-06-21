@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="new updates on getting saving to work">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/MainView.fxml" afterDir="false" />
+    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="updated and improved documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/writingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/menue.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/menue.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/writing.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Saving.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Saving.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Universe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +47,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="back" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -88,7 +82,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Frontend&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;back&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -161,9 +155,8 @@
       <workItem from="1713282938373" duration="68000" />
       <workItem from="1713543226280" duration="2863000" />
       <workItem from="1713800056668" duration="5344000" />
-      <workItem from="1713882764658" duration="1175000" />
-      <workItem from="1718802017566" duration="2493000" />
-      <workItem from="1718806437109" duration="884000" />
+      <workItem from="1713876091047" duration="11587000" />
+      <workItem from="1713979938497" duration="346000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -228,7 +221,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712946000681</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added JavaDocs for developing purposes">
+      <option name="closed" value="true" />
+      <created>1713881764617</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713881764617</updated>
+    </task>
+    <task id="LOCAL-00010" summary="updated and improved documentation">
+      <option name="closed" value="true" />
+      <created>1713885869044</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713885869044</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +274,8 @@
     <MESSAGE value="tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?" />
     <MESSAGE value="started working on FileOperation" />
     <MESSAGE value="new updates on getting saving to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="new updates on getting saving to work" />
+    <MESSAGE value="added JavaDocs for developing purposes" />
+    <MESSAGE value="updated and improved documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated and improved documentation" />
   </component>
 </project>
