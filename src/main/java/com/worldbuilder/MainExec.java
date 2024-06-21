@@ -11,24 +11,24 @@ import java.io.File;
 public class MainExec extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent loader = FXMLLoader.load(getClass().getResource("MainViewController.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getResource("debugging.fxml"));
         Scene scene = new Scene(loader);
         stage.setScene(scene);
         stage.show();
 
-
         // variable declaration
         Saving running = new Saving();
-        Universe testUniverse = new Universe("test");
+        //Universe testUniverse = new Universe("test");
         Universe mt = new Universe();
         Category testCat = new Category("tester");
         Element testEL1 = new Element("testl1");
         Element testEL2 = new Element("testl2");
+        World testW = new World("Luma");
         // end variables
 
         // initial processes needed (file creation etc.)
         running.initialize();   // creates the main folder structure
-        running.save(testUniverse);
+        //running.save(testUniverse);
         mt = (Universe) running.open(running.getMainPath().toFile());
         // done with initial processes
 
