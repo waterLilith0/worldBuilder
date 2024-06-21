@@ -1,0 +1,257 @@
+Index: src/main/java/com/worldbuilder/MainExec.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.worldbuilder;\r\n\r\nimport javafx.application.Application;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.stage.Stage;\r\nimport java.nio.file.Files;\r\nimport java.nio.file.Path;\r\nimport java.nio.file.Paths;\r\n\r\npublic class MainExec extends Application {\r\n    @Override\r\n    public void start(Stage stage) throws Exception {\r\n        Parent loader = FXMLLoader.load(getClass().getResource(\"debugging.fxml\"));\r\n        Scene scene = new Scene(loader);\r\n        stage.setScene(scene);\r\n        stage.show();\r\n\r\n        // variable declaration\r\n        Category test = new Category(\"tester\");\r\n        Element testEL1 = new Element(\"testl1\");\r\n        Element testEL2 = new Element(\"testl2\");\r\n\r\n        // end variables\r\n\r\n        // initial processes needed (file creation etc)\r\n\r\n        // done with initial processes\r\n\r\n        // use methods\r\n        test.addElement(testEL1);\r\n        test.addElement(testEL2);\r\n        testEL2.setText(\"this \\n is \\n a \\n test to see whether it works!\");\r\n        // end use of methods\r\n\r\n\r\n\r\n/*\r\n        folder structure of the program:\r\n        worldbuilder - main folder\r\n            - java - this is where all the java classes are saved\r\n            - resources - includes the css and fxml for the look of the program\r\n            - sav - this is where the program should save the data permanently\r\n            - Controller- Fxml controller for views\r\n*/\r\n    }\r\n\r\n/* only important for console version!!!\r\n        // console version variables\r\n        Scanner input = new Scanner(System.in);\r\n        boolean run = true;\r\n        // end console variables\r\n\r\n        // console version logic\r\n        while (run) {\r\n            System.out.println(\"Welcome to worldBuilder! Please choose what you want to do: \\n\" +\r\n                    \"View saved projects: 1 \\n Edit project: 2 \\n Delete project: 3 \\n Exit: 0 \\n then press enter\");\r\n            int mainMenue = 5;\r\n            try {\r\n                mainMenue = input.nextInt();\r\n            } catch (InputMismatchException e) {\r\n                System.out.println(\"Please only enter a number!\");\r\n            }\r\n            switch (mainMenue) {\r\n                case 1:\r\n                    // view();\r\n                    break;\r\n                case 2:\r\n                    // TODO edit(projectName);\r\n                    break;\r\n                case 3:\r\n                    // TODO delete(projectName);\r\n                    break;\r\n                case 0:\r\n                    run = false;\r\n                    break;\r\n                default:\r\n                    System.out.println(\"Please enter a number between 0 and 3 and then enter: \");\r\n                    break;\r\n            }\r\n        }\r\n        // end of console only version\r\n*/\r\n    public static void main(String[] args) {\r\n        launch();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/worldbuilder/MainExec.java b/src/main/java/com/worldbuilder/MainExec.java
+--- a/src/main/java/com/worldbuilder/MainExec.java	
++++ b/src/main/java/com/worldbuilder/MainExec.java	
+@@ -1,9 +1,6 @@
+ package com.worldbuilder;
+ 
+ import javafx.application.Application;
+-import javafx.fxml.FXMLLoader;
+-import javafx.scene.Parent;
+-import javafx.scene.Scene;
+ import javafx.stage.Stage;
+ import java.nio.file.Files;
+ import java.nio.file.Path;
+@@ -12,10 +9,12 @@
+ public class MainExec extends Application {
+     @Override
+     public void start(Stage stage) throws Exception {
+-        Parent loader = FXMLLoader.load(getClass().getResource("debugging.fxml"));
+-        Scene scene = new Scene(loader);
++/* Scene for UI
++        Parent fxmlLoader = FXMLLoader.load(getClass().getResource("debugging.fxml"));
++        Scene scene = new Scene(fxmlLoader);
+         stage.setScene(scene);
+         stage.show();
++*/
+ 
+         // variable declaration
+         Category test = new Category("tester");
+@@ -42,7 +41,6 @@
+             - java - this is where all the java classes are saved
+             - resources - includes the css and fxml for the look of the program
+             - sav - this is where the program should save the data permanently
+-            - Controller- Fxml controller for views
+ */
+     }
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"77f87cf8-7eb5-400d-aaf5-5c83de85a532\" name=\"Changes\" comment=\"test branch 2\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand />\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"front\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"back\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;waterLilith0&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"ac5efc9d-d8d0-4d93-957f-4accf4192938\" />\r\n        <option name=\"url\" value=\"https://github.com/waterLilith0/worldBuilder.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2XzW741SSyQUqjQFY5eUaLCdRnp\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Gradle.Build worldBuilder.executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.worldBuilder [:MainExec.main()].executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/floof/IdeaProjects/PlayGround&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.4862069&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\ghsenet\\IdeaProjects\\worldBuilder\\src\\main\\resources\\com\\worldbuilder\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"worldBuilder.main\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <module name=\"worldBuilder.main\" />\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"77f87cf8-7eb5-400d-aaf5-5c83de85a532\" name=\"Changes\" comment=\"\" />\r\n      <created>1699632217412</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1699632217412</updated>\r\n      <workItem from=\"1701702330035\" duration=\"131000\" />\r\n      <workItem from=\"1701702519347\" duration=\"268000\" />\r\n      <workItem from=\"1701706941296\" duration=\"2147000\" />\r\n      <workItem from=\"1701759151783\" duration=\"4922000\" />\r\n      <workItem from=\"1703145708610\" duration=\"1092000\" />\r\n      <workItem from=\"1703272565195\" duration=\"3707000\" />\r\n      <workItem from=\"1704653569654\" duration=\"920000\" />\r\n      <workItem from=\"1704722980204\" duration=\"850000\" />\r\n      <workItem from=\"1704723841790\" duration=\"189000\" />\r\n      <workItem from=\"1704956124310\" duration=\"4442000\" />\r\n      <workItem from=\"1705302218134\" duration=\"2051000\" />\r\n      <workItem from=\"1705388752801\" duration=\"3267000\" />\r\n      <workItem from=\"1711005225896\" duration=\"47000\" />\r\n      <workItem from=\"1711005292600\" duration=\"3409000\" />\r\n      <workItem from=\"1712650656431\" duration=\"260000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"initial commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699804878587</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699804878587</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"initial commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699805096527</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699805096527</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"started working on the TextEditor\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699807994194</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699807994194</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"added classes needed\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1701707121975</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701707121975</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Added Debugging scene&#10;and sceneController\">\r\n      <created>1701761860773</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1701761860773</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1703275767367</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1703275767367</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"started working on FileOperation\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1705030148446</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1705030148446</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"test branch\">\r\n      <created>1712651746299</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712651746299</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"test branch 2\">\r\n      <created>1712652046930</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712652046930</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"test branch 2\">\r\n      <created>1712652536910</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712652536910</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"11\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"back\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"initial commit\" />\r\n    <MESSAGE value=\"started working on the TextEditor\" />\r\n    <MESSAGE value=\"added classes needed\" />\r\n    <MESSAGE value=\"Added Debugging scene&#10;and sceneController\" />\r\n    <MESSAGE value=\"tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?\" />\r\n    <MESSAGE value=\"started working on FileOperation\" />\r\n    <MESSAGE value=\"test branch\" />\r\n    <MESSAGE value=\"test branch 2\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"test branch 2\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,7 +4,18 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="test branch 2" />
++    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="test branch 2">
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/menueController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/workingController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/working.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/debuggingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/debuggingController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/debugging.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/debugging.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/mainMenu.fxml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/menue.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/menue.fxml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -35,15 +46,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="Git.Merge.Settings">
+-    <option name="BRANCH" value="front" />
+-  </component>
+   <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="back" />
+-      </map>
+-    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory">{
+@@ -140,7 +143,6 @@
+       <workItem from="1705388752801" duration="3267000" />
+       <workItem from="1711005225896" duration="47000" />
+       <workItem from="1711005292600" duration="3409000" />
+-      <workItem from="1712650656431" duration="260000" />
+     </task>
+     <task id="LOCAL-00001" summary="initial commit">
+       <option name="closed" value="true" />
+@@ -197,28 +199,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1705030148446</updated>
+     </task>
+-    <task id="LOCAL-00008" summary="test branch">
+-      <created>1712651746299</created>
+-      <option name="number" value="00008" />
+-      <option name="presentableId" value="LOCAL-00008" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712651746299</updated>
+-    </task>
+-    <task id="LOCAL-00009" summary="test branch 2">
+-      <created>1712652046930</created>
+-      <option name="number" value="00009" />
+-      <option name="presentableId" value="LOCAL-00009" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712652046930</updated>
+-    </task>
+-    <task id="LOCAL-00010" summary="test branch 2">
+-      <created>1712652536910</created>
+-      <option name="number" value="00010" />
+-      <option name="presentableId" value="LOCAL-00010" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712652536910</updated>
+-    </task>
+-    <option name="localTasksCounter" value="11" />
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -229,19 +210,7 @@
+       <map>
+         <entry key="MAIN">
+           <value>
+-            <State>
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="back" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                </map>
+-              </option>
+-            </State>
++            <State />
+           </value>
+         </entry>
+       </map>
+@@ -254,8 +223,6 @@
+     <MESSAGE value="Added Debugging scene&#10;and sceneController" />
+     <MESSAGE value="tried experimenting with debugging scene; call to UIController apparently only happens on first load, doesn't update after?" />
+     <MESSAGE value="started working on FileOperation" />
+-    <MESSAGE value="test branch" />
+-    <MESSAGE value="test branch 2" />
+-    <option name="LAST_COMMIT_MESSAGE" value="test branch 2" />
++    <option name="LAST_COMMIT_MESSAGE" value="started working on FileOperation" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/com/worldbuilder/Controller/debuggingController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.worldbuilder.Controller;\r\n\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.Label;\r\n\r\npublic class debuggingController {\r\n    @FXML\r\n    Label label;\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/worldbuilder/Controller/debuggingController.java b/src/main/java/com/worldbuilder/Controller/debuggingController.java
+--- a/src/main/java/com/worldbuilder/Controller/debuggingController.java	
++++ b/src/main/java/com/worldbuilder/Controller/debuggingController.java	
+@@ -5,5 +5,5 @@
+ 
+ public class debuggingController {
+     @FXML
+-    Label label;
++    Label labble;
+ }
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"FrameworkDetectionExcludesConfiguration\">\r\n    <file type=\"web\" url=\"file://$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,4 +1,3 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="FrameworkDetectionExcludesConfiguration">
+Index: src/main/java/com/worldbuilder/Controller/menueController.java
+===================================================================
+diff --git a/src/main/java/com/worldbuilder/Controller/menueController.java b/src/main/java/com/worldbuilder/Controller/menueController.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/com/worldbuilder/Controller/menueController.java	
+@@ -0,0 +1,11 @@
++package com.worldbuilder.Controller;
++
++import javafx.fxml.FXML;
++import javafx.scene.layout.HBox;
++
++public class menueController {
++    @FXML
++    HBox upper;
++    HBox lower;
++
++}
+Index: src/main/resources/com/worldbuilder/debugging.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.*?>\r\n<?import javafx.scene.layout.*?>\r\n\r\n\r\n<AnchorPane prefHeight=\"400.0\" prefWidth=\"600.0\" xmlns=\"http://javafx.com/javafx/17.0.2-ea\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.worldbuilder.Controller.debuggingController\">\r\n   <children>\r\n      <Label layoutX=\"286.0\" layoutY=\"192.0\" text=\"Label\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/worldbuilder/debugging.fxml b/src/main/resources/com/worldbuilder/debugging.fxml
+--- a/src/main/resources/com/worldbuilder/debugging.fxml	
++++ b/src/main/resources/com/worldbuilder/debugging.fxml	
+@@ -1,6 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
+-<?import javafx.scene.control.*?>
+ <?import javafx.scene.layout.*?>
+ 
+ 
+Index: src/main/resources/com/worldbuilder/working.fxml
+===================================================================
+diff --git a/src/main/resources/com/worldbuilder/working.fxml b/src/main/resources/com/worldbuilder/working.fxml
+new file mode 100644
+--- /dev/null	
++++ b/src/main/resources/com/worldbuilder/working.fxml	
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<?import javafx.scene.layout.*?>
++
++
++<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.worldbuilder.Controller.workingController">
++   <children>
++      <BorderPane prefHeight="200.0" prefWidth="200.0" />
++   </children>
++</AnchorPane>
+Index: src/main/java/com/worldbuilder/Controller/workingController.java
+===================================================================
+diff --git a/src/main/java/com/worldbuilder/Controller/workingController.java b/src/main/java/com/worldbuilder/Controller/workingController.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/com/worldbuilder/Controller/workingController.java	
+@@ -0,0 +1,7 @@
++package com.worldbuilder.Controller;
++
++import javafx.fxml.FXML;
++
++public class workingController{
++    @FXML
++}
