@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="updated and improved documentation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/CreateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/menueController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/TreeViewList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/Create.fxml" afterDir="false" />
+    <list default="true" id="77f87cf8-7eb5-400d-aaf5-5c83de85a532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/MainExec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/menue.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/worldbuilder/menue.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/menueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worldbuilder/Controller/menueController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +156,7 @@
       <workItem from="1713979938497" duration="346000" />
       <workItem from="1718981557734" duration="7451000" />
       <workItem from="1718989776612" duration="474000" />
-      <workItem from="1719152065731" duration="317000" />
+      <workItem from="1719152065731" duration="1181000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -244,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713885869044</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Creating new Category, etc Universe UI">
+      <option name="closed" value="true" />
+      <created>1719152503133</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719152503133</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +284,7 @@
     <MESSAGE value="new updates on getting saving to work" />
     <MESSAGE value="added JavaDocs for developing purposes" />
     <MESSAGE value="updated and improved documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated and improved documentation" />
+    <MESSAGE value="Creating new Category, etc Universe UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating new Category, etc Universe UI" />
   </component>
 </project>

@@ -21,13 +21,9 @@ public class menueController{
      Stage stage = new Stage();
 
     public void onB_create(ActionEvent event)throws Exception {
-        FXMLLoader main = new FXMLLoader();
-        main.setLocation(getClass().getResource("Create.fxml"));
-        Parent mainParent = main.load();
-        Scene mainScene = new Scene(mainParent);;
-
-
-        stage.setScene(mainScene);
-        stage.show();
+        /*Parent loader = FXMLLoader.load(getClass().getResource("Create.fxml"));
+        Scene scene = new Scene(loader);
+        stage.setScene(scene);
+        stage.show();*/
     }
 }
