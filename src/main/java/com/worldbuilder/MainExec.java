@@ -20,7 +20,6 @@ public class MainExec extends Application {
         // variable declaration
         Saving running = new Saving();
         Universe testUniverse = new Universe("test");
-        Universe mt = new Universe();
         Category testCat = new Category("tester");
         Element testEL1 = new Element("testl1");
         Element testEL2 = new Element("testl2");
@@ -31,7 +30,8 @@ public class MainExec extends Application {
         running.initialize();   // creates the main folder structure
         running.save(testUniverse);
         System.out.println(running.getUniverses());
-        mt = (Universe) running.open(running.getUniverses().get(0));
+        Universe mt = (Universe) running.open(running.getUniverses().get(0));
+        System.out.println(mt.getName());
         // done with initial processes
 
         // use methods
