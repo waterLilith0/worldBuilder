@@ -11,7 +11,7 @@ import java.io.File;
 public class MainExec extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent loader = FXMLLoader.load(getClass().getResource("debugging.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getResource("menue.fxml"));
         Scene scene = new Scene(loader);
         stage.setScene(scene);
         stage.show();
