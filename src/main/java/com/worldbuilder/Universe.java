@@ -58,6 +58,10 @@ public class Universe implements Serializable {
         return color;
     }
 
+    public SecureRandom getId() {
+        return id;
+    }
+
     public void setName(String name) {
         this.name = name;
     }

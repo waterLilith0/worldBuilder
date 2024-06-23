@@ -1,6 +1,8 @@
 package com.worldbuilder;
 
+import com.worldbuilder.Controller.CreateController;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,6 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 public class MainExec extends Application {
+    Stage c_stage = new Stage();
     @Override
     public void start(Stage stage) throws Exception {
         Parent loader = FXMLLoader.load(getClass().getResource("menue.fxml"));
@@ -92,4 +95,24 @@ public class MainExec extends Application {
     public static void main(String[] args) {
         launch();
     }
+
+    public void showCreate()throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Create.fxml"));
+
+        Parent root = loader.load();
+        CreateController controller = loader.getController();
+
+        controller.setMainExec(this);
+        controller.inGroup();
+
+        c_stage = new Stage();
+        Scene scene = new Scene(root);
+        c_stage.setScene(scene);
+        c_stage.show();
+    }
+
+    public void closeCreate(){
+        c_stage.close();
+    }
 }
+

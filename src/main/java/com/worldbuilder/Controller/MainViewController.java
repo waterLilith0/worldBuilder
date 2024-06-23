@@ -14,7 +14,7 @@ public class MainViewController {
     @FXML
     private MenuBar mainMBar;
 
-    public void getTreeFormat(){
+    public void goBack(){
 
     }
 }
