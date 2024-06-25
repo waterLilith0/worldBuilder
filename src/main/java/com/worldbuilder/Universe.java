@@ -47,7 +47,7 @@ public class Universe implements Serializable {
     /**
      * @return reads name of Universe as String
      */
-    String getName() {
+    public String getName() {
         return name;
     }
 

@@ -13,9 +13,11 @@ import java.io.FileNotFoundException;
 
 public class MainExec extends Application {
     Stage c_stage = new Stage();
+    Stage stage = new Stage();
     @Override
     public void start(Stage stage) throws Exception {
-        Parent loader = FXMLLoader.load(getClass().getResource("menue.fxml"));
+        this.stage = stage;
+        Parent loader = FXMLLoader.load(getClass().getResource("MainView.fxml"));
         Scene scene = new Scene(loader);
         stage.setScene(scene);
         stage.show();
@@ -23,9 +25,11 @@ public class MainExec extends Application {
         // variable declaration
         Saving running = new Saving();
         Universe testUniverse = new Universe("test");
-        Universe mt = new Universe();
+        Universe mt = new Universe("Help");
         Category testCat = new Category("tester");
+        testUniverse.addCategory(testCat);
         Element testEL1 = new Element("testl1");
+        testCat.addElement(testEL1);
         Element testEL2 = new Element("testl2");
         World testW = new World("Luma");
         // end variables
@@ -33,6 +37,7 @@ public class MainExec extends Application {
         // initial processes needed (file creation etc.)
         running.initialize();   // creates the main folder structure
         running.save(testUniverse);
+
         System.out.println(running.getUniverses());
         mt = (Universe) running.open(running.getUniverses().get(0));
         // done with initial processes
@@ -113,6 +118,17 @@ public class MainExec extends Application {
 
     public void closeCreate(){
         c_stage.close();
+    }
+
+
+    public void goMenue() throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("menue.fxml"));
+        Parent root = loader.load();
+        Stage createStage = new Stage();
+        createStage.setTitle("Create Universe");
+        createStage.setScene(new Scene(root));
+        createStage.show();
+
     }
 }
 

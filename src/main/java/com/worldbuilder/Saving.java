@@ -55,7 +55,7 @@ public class Saving {
      * @param chosenFile the file to be opened
      * @return reads the Universe that was previously saved in the file to be read
      */
-    Object open(File chosenFile) {
+    public Object open(File chosenFile) {
         try {
             FileInputStream inFile = new FileInputStream(chosenFile);
             ObjectInputStream inStream = new ObjectInputStream(inFile);
@@ -80,7 +80,7 @@ public class Saving {
     /**
      * @return gives back a list of names of files saved in the main directory (Universes)
      */
-    public ArrayList<File> getUniverses() {
+public ArrayList<File> getUniverses() {
         ArrayList<File> universes = new ArrayList<>();
         File dir = new File(mainPath.toUri());
         File[] files = dir.listFiles();
@@ -89,6 +89,7 @@ public class Saving {
         }
         return universes;
     }
+
 
     // methods end
 }

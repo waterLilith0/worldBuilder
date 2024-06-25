@@ -19,17 +19,7 @@
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem mnemonicParsing="false" text="Save" />
                   </items>
                 </Menu>
               </menus>
@@ -48,7 +38,7 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
          <children>
-            <Button fx:id="b_create" mnemonicParsing="false" onAction="#onB_create" text="Create" />
+            <Button fx:id="b_create" mnemonicParsing="false" onAction="#loadUniverse" text="Create" />
          </children>
       </HBox>
    </bottom>

@@ -17,10 +17,6 @@ public class CreateController {
     @FXML
     private RadioButton element;
     @FXML
-    private Button b_cancel;
-    @FXML
-    private Button b_save;
-    @FXML
     private TextField t_name;
     @FXML
     private Label l_info;
@@ -39,7 +35,6 @@ public class CreateController {
         this.mainExec = mainExec;
     }
     public void inGroup(){
-
         universe.setToggleGroup(types);
         world.setToggleGroup(types);
         category.setToggleGroup(types);
@@ -67,5 +62,7 @@ public class CreateController {
         }
     }
 
-
+    public String getT_name() {
+        return t_name.getText();
+    }
 }

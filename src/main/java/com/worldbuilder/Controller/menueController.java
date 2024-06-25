@@ -26,8 +26,8 @@ import java.util.HashMap;
 public class menueController{
     MainExec main = new MainExec();
     Saving saving = new Saving();
-    @FXML
-    private MenuButton menueButton;
+
+
     @FXML
     private Label l_title;
     @FXML
@@ -39,16 +39,21 @@ public class menueController{
         main.showCreate();
     }
 
-    public void loadUniverses(Saving location){
-        /*for (Universe universe : saving.getUniverses()) {
-            Button button = new Button("ID: " + universe.getId());
+    public void loadUniverses(){
+        Saving location = new Saving();
+        ArrayList<Universe> universes = new ArrayList<>();
+        for (int i = 0; i < location.getUniverses().size(); i++) {
+            Universe a = (Universe) location.open(location.getUniverses().get(i));
+            universes.add(a);
+        }
+        for (Universe universe : universes) {
+            Button button = new Button("" + universe.getName());
             container.getChildren().add(button);
-        }*/
+        }
     }
     public void loadCategories(Universe location){
         HashMap<Integer, Category> c = location.getSavedCategories();
     }
-    public void loadUniversesElements(Category location){
+    public void loadUniversesElements(Category location){}
 
-    }
 }
